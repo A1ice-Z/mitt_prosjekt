@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    build: ./db/Dockerfile
+
+  backend:
+    build: ./backend/Dockerfile
+
+  frontend:
+    build: ./frontend/Dockerfile
