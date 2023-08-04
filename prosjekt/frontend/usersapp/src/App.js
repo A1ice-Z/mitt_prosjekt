@@ -28,22 +28,22 @@
 // export default App;
 
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, Routes } from 'react-router-dom';
 import Login from './Login';
+import Logout from './Logout';
 
 const App = () => (
   <Router>
     <div>
-      <Link to="/login">
+      <Link to="/Login">
         <button>Go to Login</button>
       </Link>
     </div>
 
-    <Switch>
-      <Route path="/login">
-        <Login />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path="/Login" Component={Login}/>
+      <Route path="/Logout" Component={Logout}/>
+    </Routes>
   </Router>
 );
 

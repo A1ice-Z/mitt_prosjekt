@@ -10,6 +10,7 @@ import Login from './Login';
 import "./index.css"
 import reportWebVitals from "./reportWebVitals";
 import { persistStore } from 'redux-persist';
+import App from "./App";
 
 let persistor = persistStore(store);
 
@@ -19,7 +20,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Login />
+        <App />
       </PersistGate>
     </Provider>
   </React.StrictMode>
